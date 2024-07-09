@@ -1,0 +1,165 @@
+body {
+    font-family: 'Italiana', serif;
+    font-family: 'Playfair Display', serif; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #e8eaed;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bolder;
+    flex-grow: 1; /* Allow the logo to grow and take up available space */
+    margin-left: 15px;
+}
+
+.mobile-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+a{
+    color: #333;
+    font-weight: 600;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* Footer styles */
+footer {
+  background-color: #e8eaed;
+  color: #333;
+  padding: 5px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #007bff; /* Change the color on hover */
+}
+
+
+
+/* Responsive  */
+
+  @media (max-width: 768px)  {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #e8eaed;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1; /* Add this to ensure the menu appears on top */
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header {
+        display: block;
+        flex-direction: row; /* Revert back to horizontal layout */
+        align-items: center; /* Center-align items within the header */
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .products {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .product {
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+
+  .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .product h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .footer-content {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .social-media {
+    margin-top: 10px; /* Add some space between social media icons and the copyright text on smaller screens */
+  }

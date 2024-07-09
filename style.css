@@ -1,0 +1,231 @@
+body {
+    font-family: 'Italiana', serif;
+    font-family: 'Playfair Display', serif; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #e8eaed;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bolder;
+    flex-grow: 1; /* Allow the logo to grow and take up available space */
+    margin-left: 15px;
+}
+
+.mobile-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+a{
+    color: #333;
+    font-weight: 600;
+}
+
+/* Hero section styles */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('Images/1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* About section styles */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.about-text {
+    flex: 1;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 24px;
+}
+
+.about-text p {
+    font-size: 16px;
+}
+
+/* .about-image {
+    flex: 1;
+    text-align: center;
+} */
+/* Testimonials styles */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.testimonial-image {
+    flex: 1;
+    text-align: center;
+}
+
+.testimonial-image img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.testimonial-text {
+    flex: 3;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.testimonial-text p {
+    font-style: italic;
+}
+/* Footer styles */
+footer {
+    background-color: #e8eaed;
+    color: #333;
+    padding: 5px 0;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .social-media a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    margin-right: 10px;
+    margin-left: 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: #007bff; /* Change the color on hover */
+  }
+
+  /* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #e8eaed;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1; /* Add this to ensure the menu appears on top */
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header {
+        display: block;
+        flex-direction: row; /* Revert back to horizontal layout */
+        align-items: center; /* Center-align items within the header */
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .footer-content {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+    .social-media {
+        margin-top: 10px; /* Add some space between social media icons and the copyright text on smaller screens */
+      }
+}
